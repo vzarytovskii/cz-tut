@@ -7,6 +7,7 @@ import Accents from '../exercises/Accents';
 import ConfusedWords from '../exercises/ConfusedWords';
 import Results from '../components/Results';
 import { useSettings, useT } from '../SettingsContext';
+import { localizeExplanation } from '../explanationTranslations';
 
 const COMPONENTS = {
   flashcards: Flashcards,
@@ -253,6 +254,7 @@ export default function Exercise({ data, type, level = 'auto', onLevelChange, on
   }
 
   const item = session.served[index];
+  const explanation = localizeExplanation(item.explanation, settings.lang);
   const Component = COMPONENTS[item.exerciseType];
 
   return (
@@ -288,10 +290,18 @@ export default function Exercise({ data, type, level = 'auto', onLevelChange, on
       <div className="sr-only" role="status" aria-live="polite">
         {answered ? t(results[results.length - 1] ? 'feedbackCorrect' : 'feedbackWrong') : ''}
       </div>
-      {answered && (
-        <button ref={nextRef} className="btn btn-primary exercise-next" onClick={handleNext}>
-          {autoAdvance ? t('next', { n: remaining }) : t('nextPlain')}
-        </button>
+      {item.exerciseType !== 'flashcards' && (
+        // Space is reserved up front so answering never shifts the layout.
+        <div className="exercise-next-row">
+          {answered && (
+            <button ref={nextRef} className="btn btn-primary exercise-next" onClick={handleNext}>
+              {autoAdvance ? t('next', { n: remaining }) : t('nextPlain')}
+            </button>
+          )}
+        </div>
+      )}
+      {answered && explanation && (
+        <div className="explanation" role="note" lang={settings.lang}>{explanation}</div>
       )}
     </main>
   );

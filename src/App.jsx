@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { SettingsProvider, useT } from './SettingsContext';
 import { useRouter } from './router';
 import LanguagePicker from './components/LanguagePicker';
+import HeaderAppearanceControls from './components/HeaderAppearanceControls';
 import Home from './views/Home';
 import Exercise from './views/Exercise';
 import Settings from './views/Settings';
@@ -62,7 +63,10 @@ function AppContent() {
         )}
         <h1>{title}</h1>
         <div className="header-actions">
-          <LanguagePicker />
+          <div className="header-controls">
+            <LanguagePicker />
+            <HeaderAppearanceControls />
+          </div>
           <button
             className="icon-btn"
             onClick={toggleSettings}

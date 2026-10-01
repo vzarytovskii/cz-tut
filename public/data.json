@@ -5968,7 +5968,7 @@
             }
           },
           {
-            "question": "The standard Czech word for 'soup' is:",
+            "question": "soup",
             "options": [
               "polévka",
               "polívka"
@@ -5977,7 +5977,7 @@
             "explanation": "'polévka' is standard Czech; 'polívka' is colloquial (obecná čeština)."
           },
           {
-            "question": "The standard Czech word for 'small' is:",
+            "question": "small",
             "options": [
               "malý",
               "malej"
@@ -5986,7 +5986,7 @@
             "explanation": "'malý' is standard; 'malej' is colloquial Bohemian speech."
           },
           {
-            "question": "The standard infinitive 'to be' is:",
+            "question": "to be",
             "options": [
               "být",
               "bejt"
@@ -6028,7 +6028,7 @@
             "explanation": "'být' = to be; 'bít' = to beat/hit."
           },
           {
-            "question": "The neutral word for 'house' is:",
+            "question": "house",
             "options": [
               "dům",
               "barák"

@@ -48,8 +48,10 @@ export default function ChooseLetter({ item, onAnswer }) {
     <div className="question-container">
       <p className="hint-text">{item.hint}</p>
       <div className={`word-display${resultCls}`} lang="cs">
-        {wordParts[0]}<span className="blank">{answered ? item.missing : '_'}</span>{wordParts[1] || ''}
-        {answered && <FeedbackMark correct={isCorrect} />}
+        <span className="mark-anchor">
+          {wordParts[0]}<span className="blank">{answered ? item.missing : '_'}</span>{wordParts[1] || ''}
+          {answered && <FeedbackMark correct={isCorrect} />}
+        </span>
       </div>
       <input
         ref={inputRef}

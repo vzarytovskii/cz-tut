@@ -31,7 +31,9 @@ export default function OptionList({ options, onPick, answered, statusOf, compac
           >
             {!compact && <span className="option-key" aria-hidden="true">{i + 1}</span>}
             <span className="option-label" lang={lang}>{opt}</span>
-            {status && <FeedbackMark correct={status === 'correct'} />}
+            {compact
+              ? status && <FeedbackMark correct={status === 'correct'} />
+              : <span className="mark-slot">{status && <FeedbackMark correct={status === 'correct'} />}</span>}
           </button>
         );
       })}

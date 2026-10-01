@@ -36,9 +36,6 @@ export default function ConfusedWords({ item, onAnswer }) {
         lang="cs"
         statusOf={(i) => (i === correctIdx ? 'correct' : i === chosen ? 'wrong' : null)}
       />
-      {answered && item.explanation && (
-        <div className="explanation" role="note">{item.explanation}</div>
-      )}
     </div>
   );
 }

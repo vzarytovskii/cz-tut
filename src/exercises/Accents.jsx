@@ -82,8 +82,8 @@ export default function Accents({ item, onAnswer }) {
         {checked && <FeedbackMark correct={chars.join('') === item.correct} />}
       </div>
 
-      {selected !== null && !checked && (
-        <div className="accent-palette" lang="cs">
+      <div className="accent-palette" lang="cs">
+        {selected !== null && !checked && (<>
           <button onClick={handleRevert} title={t('noAccent')} aria-label={t('noAccent')}>
             {item.plain[selected]}
           </button>
@@ -92,8 +92,8 @@ export default function Accents({ item, onAnswer }) {
               {ch}
             </button>
           ))}
-        </div>
-      )}
+        </>)}
+      </div>
 
       <button
         className="btn btn-primary"
@@ -104,11 +104,13 @@ export default function Accents({ item, onAnswer }) {
         {t('check')}
       </button>
 
-      {checked && (
-        <p className="hint-text" style={{ marginTop: '0.5rem' }}>
-          {t('correctAnswer')} <strong lang="cs">{item.correct}</strong>
-        </p>
-      )}
+      <p
+        className="hint-text"
+        style={{ marginTop: '0.5rem', visibility: checked ? 'visible' : 'hidden' }}
+        aria-hidden={!checked}
+      >
+        {t('correctAnswer')} <strong lang="cs">{item.correct}</strong>
+      </p>
     </div>
   );
 }
