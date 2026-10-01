@@ -5,8 +5,12 @@
 }
 
 :root {
-  --bg: #f8f9fa;
-  --bg-card: #ffffff;
+  --bg: #eef4ff;
+  --bg-glow: rgba(95, 136, 255, 0.18);
+  --bg-card: rgba(255, 255, 255, 0.56);
+  --bg-card-strong: rgba(255, 255, 255, 0.72);
+  --glass: rgba(255, 255, 255, 0.3);
+  --glass-strong: rgba(255, 255, 255, 0.42);
   --text: #1a1a2e;
   --text-muted: #4b5563;
   --accent: #1765cc;
@@ -17,11 +21,11 @@
   --error: #b91c1c;
   --error-bg: rgba(185, 28, 28, 0.1);
   --on-error: #ffffff;
-  --border: #e5e7eb;
-  --control-border: #767f8c;
+  --border: rgba(148, 163, 184, 0.24);
+  --control-border: rgba(93, 111, 129, 0.72);
   --focus: #1765cc;
   --radius: 0.75rem;
-  --shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.08);
+  --shadow: 0 0.625rem 1.5rem rgba(15, 23, 42, 0.08);
   --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -31,8 +35,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0f172a;
-    --bg-card: #1e293b;
+    --bg: #0b1220;
+    --bg-glow: rgba(96, 165, 250, 0.18);
+    --bg-card: rgba(15, 23, 42, 0.54);
+    --bg-card-strong: rgba(15, 23, 42, 0.72);
+    --glass: rgba(15, 23, 42, 0.26);
+    --glass-strong: rgba(15, 23, 42, 0.42);
     --text: #f1f5f9;
     --text-muted: #94a3b8;
     --accent: #60a5fa;
@@ -43,16 +51,20 @@
     --error: #f87171;
     --error-bg: rgba(248, 113, 113, 0.14);
     --on-error: #0f172a;
-    --border: #334155;
-    --control-border: #7b8aa0;
+    --border: rgba(148, 163, 184, 0.2);
+    --control-border: rgba(148, 163, 184, 0.8);
     --focus: #93c5fd;
-    --shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.3);
+    --shadow: 0 0.625rem 1.5rem rgba(2, 6, 23, 0.42);
   }
 }
 
 [data-theme="dark"] {
-  --bg: #0f172a;
-  --bg-card: #1e293b;
+  --bg: #0b1220;
+  --bg-glow: rgba(96, 165, 250, 0.18);
+  --bg-card: rgba(15, 23, 42, 0.54);
+  --bg-card-strong: rgba(15, 23, 42, 0.72);
+  --glass: rgba(15, 23, 42, 0.26);
+  --glass-strong: rgba(15, 23, 42, 0.42);
   --text: #f1f5f9;
   --text-muted: #94a3b8;
   --accent: #60a5fa;
@@ -63,10 +75,10 @@
   --error: #f87171;
   --error-bg: rgba(248, 113, 113, 0.14);
   --on-error: #0f172a;
-  --border: #334155;
-  --control-border: #7b8aa0;
+  --border: rgba(148, 163, 184, 0.2);
+  --control-border: rgba(148, 163, 184, 0.8);
   --focus: #93c5fd;
-  --shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.3);
+  --shadow: 0 0.625rem 1.5rem rgba(2, 6, 23, 0.42);
 }
 
 /* Display size: percentages keep the user's browser font preference and stack with zoom. */
@@ -77,7 +89,10 @@ html[data-size="classroom"] { font-size: 200% }
 
 body {
   font-family: var(--font);
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top left, var(--bg-glow), transparent 28rem),
+    radial-gradient(circle at bottom right, rgba(148, 163, 184, 0.14), transparent 22rem),
+    var(--bg);
   color: var(--text);
   min-height: 100%;
   line-height: 1.5;
@@ -126,10 +141,16 @@ header {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0.75rem;
+  margin: 0.5rem 0 0.25rem;
   position: sticky;
   top: 0;
-  background: var(--bg);
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(15, 23, 42, 0.08);
   z-index: 10;
 }
 header > :first-child { justify-self: start }
@@ -265,11 +286,13 @@ select {
   padding: 1rem;
   min-height: 5rem;
   background: var(--bg-card);
-  border: 2px solid var(--border);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   cursor: pointer;
-  transition: transform 0.1s, border-color 0.15s;
+  transition: transform 0.1s, border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .exercise-card:hover { border-color: var(--control-border) }
 .exercise-card:active { transform: scale(0.98) }
@@ -319,8 +342,9 @@ select {
   z-index: 5;
   margin: 0 -1rem;
   padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
-  backdrop-filter: blur(6px);
+  background: var(--glass-strong);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--border);
 }
 .home-actions-inner {
@@ -530,9 +554,14 @@ select {
   font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
-  padding: 1.25rem 0;
+  padding: 1.25rem 1rem;
   position: relative;
   overflow-wrap: anywhere;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .question-text.prompt-word {
   font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
