@@ -28,6 +28,7 @@ export default function HeaderAppearanceControls() {
   const t = useT();
   const systemDark = useSystemDarkMode();
   const dark = settings.theme === 'auto' ? systemDark : settings.theme === 'dark';
+  const activeIndex = settings.theme === 'auto' ? 0 : settings.theme === 'light' ? 1 : 2;
 
   return (
     <div className="header-appearance">
@@ -35,14 +36,23 @@ export default function HeaderAppearanceControls() {
         className="theme-switch"
         role="group"
         aria-label={t('theme')}
-        style={{ '--switch-count': 2, '--switch-active': dark ? 1 : 0 }}
+        style={{ '--switch-count': 3, '--switch-active': activeIndex }}
       >
         <span className="theme-switch-thumb" aria-hidden="true" />
         <button
           type="button"
           className="theme-switch-option"
+          aria-label={t('themeAuto')}
+          aria-pressed={settings.theme === 'auto'}
+          onClick={() => update({ theme: 'auto' })}
+        >
+          <i className="fa-solid fa-display" aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          className="theme-switch-option"
           aria-label={t('themeLight')}
-          aria-pressed={!dark}
+          aria-pressed={settings.theme === 'light'}
           onClick={() => update({ theme: 'light' })}
         >
           <i className="fa-solid fa-sun" aria-hidden="true" />
@@ -51,7 +61,7 @@ export default function HeaderAppearanceControls() {
           type="button"
           className="theme-switch-option"
           aria-label={t('themeDark')}
-          aria-pressed={dark}
+          aria-pressed={settings.theme === 'dark'}
           onClick={() => update({ theme: 'dark' })}
         >
           <i className="fa-solid fa-moon" aria-hidden="true" />
