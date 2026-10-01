@@ -5,6 +5,16 @@
 !/package-lock.json
 !/package.json
 !/vite.config.js
+!/playwright.config.js
+
+!/.github/
+/.github/**
+!/.github/workflows/
+!/.github/workflows/ci.yml
+
+!/tests/
+/tests/**
+!/tests/*.js
 
 !/public/
 /public/**

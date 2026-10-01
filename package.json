@@ -7,7 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite build && vite preview",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:data": "playwright test data.spec --project=chromium",
+    "test:report": "playwright show-report",
+    "test:install": "playwright install --with-deps chromium"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
@@ -15,6 +21,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@vitejs/plugin-react": "^4.0.0",
     "vite": "^6.0.0"
   }

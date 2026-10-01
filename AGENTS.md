@@ -42,8 +42,14 @@ npm run dev        # Vite dev server (HMR)
 npm run build      # production build -> dist/
 npm run preview    # serve the built dist/
 npm start          # build + preview (vite build && vite preview)
+npm test           # Playwright e2e + data checks (builds, serves preview on :4173)
+npm run test:ui    # Playwright UI mode
+npm run test:headed  # watch the chromium run
+npm run test:data  # only validate public/data.json
+npm run test:report  # open the last HTML report
+npm run test:install # one-time: download Chromium
 ```
-There are **no lint, format, or test scripts** (no ESLint/Prettier/Vitest/Jest config in the repo).
+There are no lint or format scripts. Tests use Playwright (`playwright.config.js`, specs in `tests/`).
 
 ## Code Conventions & Common Patterns
 - **Components:** function components with hooks only; default-exported, one per file, PascalCase filenames matching the component. No TypeScript, no prop-types.
@@ -99,6 +105,8 @@ Top-level keys: `meta` (`{ version, lastUpdated }`), `levels` (`["A1","A2","B1",
 - No build-time data step: `public/` is copied verbatim; edit `public/data.json` directly to change content.
 
 ## Testing & QA
-- No automated test suite or framework is configured. Verify changes manually via `npm run dev`.
+- Playwright specs live in `tests/` (`home`, `exercise`, `settings`, `routing`, `data`), run against the production preview build in desktop Chromium and a Pixel 7 profile. Service workers are blocked during tests. `tests/helpers.js` provides `freshStart` (clean localStorage, English, auto-advance off) and `answerCurrent`.
+- CI (`.github/workflows/ci.yml`) runs `npm test` on every PR and push to `main`; pushes to `main` then deploy `dist/` to GitHub Pages (enable Pages → Source: GitHub Actions).
+- `.gitignore` is an allowlist: add new test/workflow files to it explicitly.
 - For PWA/offline or service-worker changes, validate with `npm run build && npm run preview` (the dev server bypasses production SW behavior), and **bump `CACHE_NAME` in `public/sw.js`** whenever shell assets change, or stale assets are served from cache.
 - Smoke checklist after edits: each exercise type renders and grades correctly, the progress bar/score updates, adaptive promotion still fires (≥80% over the last 6 answers), theme switching works (`auto`/`light`/`dark`), and a hard reload still loads offline.
