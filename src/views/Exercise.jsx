@@ -16,6 +16,7 @@ const COMPONENTS = {
   accents: Accents,
   confusedWords: ConfusedWords,
   possessives: ChooseWord,
+  prepositions: ChooseWord,
 };
 
 const EASY_LEVELS = ['A1', 'A2'];

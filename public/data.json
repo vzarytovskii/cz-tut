@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.2.0",
-    "lastUpdated": "2026-06-23"
+    "version": "1.3.0",
+    "lastUpdated": "2026-10-05"
   },
   "levels": [
     "A1",
@@ -8711,6 +8711,529 @@
               "nim"
             ],
             "correct": 1
+          }
+        ]
+      }
+    },
+    "prepositions": {
+      "label": "Prepositions & Cases",
+      "icon": "location-dot",
+      "description": "Choose the right Czech preposition and word ending",
+      "items": {
+        "A1": [
+          {
+            "question": "I'm going to the doctor.",
+            "options": ["Jdu k doktorovi.", "Jdu u doktora.", "Jdu do doktora.", "Jdu na doktorovi."],
+            "prompt": {
+              "en": "I'm going to the doctor.",
+              "pl": "Idę do lekarza.",
+              "uk": "Я йду до лікаря.",
+              "ru": "Я иду к врачу."
+            },
+            "correct": 0
+          },
+          {
+            "question": "We're going to a concert.",
+            "prompt": {
+              "en": "We're going to a concert.",
+              "pl": "Idziemy na koncert.",
+              "uk": "Ми йдемо на концерт.",
+              "ru": "Мы идём на концерт."
+            },
+            "options": ["Jdeme na koncert.", "Jdeme na koncertě.", "Jdeme k koncertu.", "Jdeme u koncertu."],
+            "correct": 0
+          },
+          {
+            "question": "The vase is on the table.",
+            "prompt": {
+              "en": "The vase is on the table.",
+              "pl": "Wazon stoi na stole.",
+              "uk": "Ваза стоїть на столі.",
+              "ru": "Ваза стоит на столе."
+            },
+            "options": ["Váza je na stole.", "Váza je na stůl.", "Váza je pod stolem.", "Váza je ve stolu."],
+            "correct": 0
+          },
+          {
+            "question": "The slippers are under the couch.",
+            "prompt": {
+              "en": "The slippers are under the couch.",
+              "pl": "Kapcie są pod kanapą.",
+              "uk": "Капці лежать під диваном.",
+              "ru": "Тапочки лежат под диваном."
+            },
+            "options": ["Pantofle jsou pod pohovkou.", "Pantofle jsou pod pohovku.", "Pantofle jsou na pohovkou.", "Pantofle jsou v pohovce."],
+            "correct": 0
+          },
+          {
+            "question": "The cat is under the table.",
+            "prompt": {
+              "en": "The cat is under the table.",
+              "pl": "Kot jest pod stołem.",
+              "uk": "Кіт під столом.",
+              "ru": "Кошка под столом."
+            },
+            "options": ["Kočka je pod stolem.", "Kočka je pod stůl.", "Kočka je na stole.", "Kočka je do stolu."],
+            "correct": 0
+          },
+          {
+            "question": "I am in Prague.",
+            "prompt": {
+              "en": "I am in Prague.",
+              "pl": "Jestem w Pradze.",
+              "uk": "Я в Празі.",
+              "ru": "Я в Праге."
+            },
+            "options": ["Jsem v Praze.", "Jsem do Prahy.", "Jsem na Praze.", "Jsem v Prahu."],
+            "correct": 0
+          },
+          {
+            "question": "I'm going to school.",
+            "prompt": {
+              "en": "I'm going to school.",
+              "pl": "Idę do szkoły.",
+              "uk": "Я йду до школи.",
+              "ru": "Я иду в школу."
+            },
+            "options": ["Jdu do školy.", "Jdu ve škole.", "Jdu k školu.", "Jdu na škole."],
+            "correct": 0
+          },
+          {
+            "question": "We are at the concert.",
+            "prompt": {
+              "en": "We are at the concert.",
+              "pl": "Jesteśmy na koncercie.",
+              "uk": "Ми на концерті.",
+              "ru": "Мы на концерте."
+            },
+            "options": ["Jsme na koncertě.", "Jsme na koncert.", "Jsme do koncertu.", "Jsme k koncertě."],
+            "correct": 0
+          },
+          {
+            "question": "Put the book on the table.",
+            "prompt": {
+              "en": "Put the book on the table.",
+              "pl": "Połóż książkę na stole.",
+              "uk": "Поклади книжку на стіл.",
+              "ru": "Положи книгу на стол."
+            },
+            "options": ["Polož knihu na stůl.", "Polož knihu na stole.", "Polož knihu pod stolem.", "Polož knihu v stůl."],
+            "correct": 0
+          },
+          {
+            "question": "The children are in the garden.",
+            "prompt": {
+              "en": "The children are in the garden.",
+              "pl": "Dzieci są w ogrodzie.",
+              "uk": "Діти в саду.",
+              "ru": "Дети в саду."
+            },
+            "options": ["Děti jsou na zahradě.", "Děti jsou na zahradu.", "Děti jsou do zahrady.", "Děti jsou k zahradě."],
+            "correct": 0
+          },
+          {
+            "question": "I'm going to the cinema.",
+            "prompt": {
+              "en": "I'm going to the cinema.",
+              "pl": "Idę do kina.",
+              "uk": "Я йду в кіно.",
+              "ru": "Я иду в кино."
+            },
+            "options": ["Jdu do kina.", "Jdu v kině.", "Jdu k kino.", "Jdu na kině."],
+            "correct": 0
+          },
+          {
+            "question": "I am at my friend's place.",
+            "prompt": {
+              "en": "I am at my friend's place.",
+              "pl": "Jestem u kolegi.",
+              "uk": "Я в друга.",
+              "ru": "Я у друга."
+            },
+            "options": ["Jsem u kamaráda.", "Jsem k kamarádovi.", "Jsem do kamaráda.", "Jsem na kamarádovi."],
+            "correct": 0
+          }
+        ],
+        "A2": [
+          {
+            "question": "I'm going to the doctor.",
+            "options": ["Jdu k lékaři.", "Jdu u lékaře.", "Jdu do lékaře.", "Jdu na lékaři."],
+            "prompt": {
+              "en": "I'm going to the doctor.",
+              "pl": "Idę do lekarza.",
+              "uk": "Я йду до лікаря.",
+              "ru": "Я иду к врачу."
+            },
+            "correct": 0
+          },
+          {
+            "question": "I am at the doctor's.",
+            "prompt": {
+              "en": "I am at the doctor's.",
+              "pl": "Jestem u lekarza.",
+              "uk": "Я в лікаря.",
+              "ru": "Я у врача."
+            },
+            "options": ["Jsem u lékaře.", "Jsem k lékaři.", "Jsem do lékaře.", "Jsem na lékaři."],
+            "correct": 0
+          },
+          {
+            "question": "Put the shoes under the bed.",
+            "prompt": {
+              "en": "Put the shoes under the bed.",
+              "pl": "Połóż buty pod łóżkiem.",
+              "uk": "Поклади взуття під ліжко.",
+              "ru": "Положи обувь под кровать."
+            },
+            "options": ["Dej boty pod postel.", "Dej boty pod postelí.", "Dej boty před postelí.", "Dej boty v postel."],
+            "correct": 0
+          },
+          {
+            "question": "The shoes are under the bed.",
+            "prompt": {
+              "en": "The shoes are under the bed.",
+              "pl": "Buty są pod łóżkiem.",
+              "uk": "Взуття під ліжком.",
+              "ru": "Обувь под кроватью."
+            },
+            "options": ["Boty jsou pod postelí.", "Boty jsou pod postel.", "Boty jsou před postelí.", "Boty jsou v posteli."],
+            "correct": 0
+          },
+          {
+            "question": "I'm putting flowers into the vase.",
+            "prompt": {
+              "en": "I'm putting flowers into the vase.",
+              "pl": "Wkładam kwiaty do wazonu.",
+              "uk": "Я ставлю квіти у вазу.",
+              "ru": "Я ставлю цветы в вазу."
+            },
+            "options": ["Dávám květiny do vázy.", "Dávám květiny ve váze.", "Dávám květiny k váze.", "Dávám květiny na váze."],
+            "correct": 0
+          },
+          {
+            "question": "The flowers are in the vase.",
+            "prompt": {
+              "en": "The flowers are in the vase.",
+              "pl": "Kwiaty są w wazonie.",
+              "uk": "Квіти у вазі.",
+              "ru": "Цветы в вазе."
+            },
+            "options": ["Květiny jsou ve váze.", "Květiny jsou do vázy.", "Květiny jsou na vázu.", "Květiny jsou k váze."],
+            "correct": 0
+          },
+          {
+            "question": "They are going to the restaurant.",
+            "prompt": {
+              "en": "They are going to the restaurant.",
+              "pl": "Idą do restauracji.",
+              "uk": "Вони йдуть до ресторану.",
+              "ru": "Они идут в ресторан."
+            },
+            "options": ["Jdou do restaurace.", "Jdou v restauraci.", "Jdou k restauraci.", "Jdou na restauraci."],
+            "correct": 0
+          },
+          {
+            "question": "We are in the restaurant.",
+            "prompt": {
+              "en": "We are in the restaurant.",
+              "pl": "Jesteśmy w restauracji.",
+              "uk": "Ми в ресторані.",
+              "ru": "Мы в ресторане."
+            },
+            "options": ["Jsme v restauraci.", "Jsme do restaurace.", "Jsme k restauraci.", "Jsme na restauraci."],
+            "correct": 0
+          },
+          {
+            "question": "We're going on vacation.",
+            "prompt": {
+              "en": "We're going on vacation.",
+              "pl": "Jedziemy na urlop.",
+              "uk": "Ми їдемо у відпустку.",
+              "ru": "Мы едем в отпуск."
+            },
+            "options": ["Jedeme na dovolenou.", "Jedeme na dovolené.", "Jedeme v dovolené.", "Jedeme do dovolené."],
+            "correct": 0
+          },
+          {
+            "question": "We are on vacation.",
+            "prompt": {
+              "en": "We are on vacation.",
+              "pl": "Jesteśmy na urlopie.",
+              "uk": "Ми у відпустці.",
+              "ru": "Мы в отпуске."
+            },
+            "options": ["Jsme na dovolené.", "Jsme na dovolenou.", "Jsme do dovolené.", "Jsme k dovolené."],
+            "correct": 0
+          },
+          {
+            "question": "Put the chair in front of the table.",
+            "prompt": {
+              "en": "Put the chair in front of the table.",
+              "pl": "Postaw krzesło przed stołem.",
+              "uk": "Постав стілець перед столом.",
+              "ru": "Поставь стул перед столом."
+            },
+            "options": ["Dej židli před stůl.", "Dej židli před stolem.", "Dej židli za stolem.", "Dej židli na stole."],
+            "correct": 0
+          },
+          {
+            "question": "The chair is in front of the table.",
+            "prompt": {
+              "en": "The chair is in front of the table.",
+              "pl": "Krzesło stoi przed stołem.",
+              "uk": "Стілець стоїть перед столом.",
+              "ru": "Стул стоит перед столом."
+            },
+            "options": ["Židle je před stolem.", "Židle je před stůl.", "Židle je za stůl.", "Židle je na stůl."],
+            "correct": 0
+          }
+        ],
+        "B1": [
+          {
+            "question": "She is talking about the new film.",
+            "prompt": {
+              "en": "She is talking about the new film.",
+              "pl": "Ona mówi o nowym filmie.",
+              "uk": "Вона говорить про новий фільм.",
+              "ru": "Она говорит о новом фильме."
+            },
+            "options": ["Mluví o novém filmu.", "Mluví o nový film.", "Mluví na novém filmu.", "Mluví do nového filmu."],
+            "correct": 0
+          },
+          {
+            "question": "They are waiting in front of the theatre.",
+            "prompt": {
+              "en": "They are waiting in front of the theatre.",
+              "pl": "Czekają przed teatrem.",
+              "uk": "Вони чекають перед театром.",
+              "ru": "Они ждут перед театром."
+            },
+            "options": ["Čekají před divadlem.", "Čekají před divadlo.", "Čekají za divadlo.", "Čekají do divadla."],
+            "correct": 0
+          },
+          {
+            "question": "He walked across the bridge.",
+            "prompt": {
+              "en": "He walked across the bridge.",
+              "pl": "Przeszedł przez most.",
+              "uk": "Він пройшов через міст.",
+              "ru": "Он прошёл через мост."
+            },
+            "options": ["Šel přes most.", "Šel přes mostě.", "Šel na mostem.", "Šel v most."],
+            "correct": 0
+          },
+          {
+            "question": "They are standing behind the house.",
+            "prompt": {
+              "en": "They are standing behind the house.",
+              "pl": "Stoją za domem.",
+              "uk": "Вони стоять за будинком.",
+              "ru": "Они стоят за домом."
+            },
+            "options": ["Stojí za domem.", "Stojí za dům.", "Stojí před dům.", "Stojí do domu."],
+            "correct": 0
+          },
+          {
+            "question": "She put the letter behind the picture.",
+            "prompt": {
+              "en": "She put the letter behind the picture.",
+              "pl": "Włożyła list za obraz.",
+              "uk": "Вона поклала лист за картину.",
+              "ru": "Она положила письмо за картину."
+            },
+            "options": ["Dala dopis za obraz.", "Dala dopis za obrazem.", "Dala dopis za obrazu.", "Dala dopis v obraze."],
+            "correct": 0
+          },
+          {
+            "question": "We are talking about the new project.",
+            "prompt": {
+              "en": "We are talking about the new project.",
+              "pl": "Mówimy o nowym projekcie.",
+              "uk": "Ми говоримо про новий проєкт.",
+              "ru": "Мы говорим о новом проекте."
+            },
+            "options": ["Mluvíme o novém projektu.", "Mluvíme o nový projekt.", "Mluvíme na novém projektu.", "Mluvíme do nového projektu."],
+            "correct": 0
+          },
+          {
+            "question": "The keys fell between the cushions.",
+            "prompt": {
+              "en": "The keys fell between the cushions.",
+              "pl": "Klucze wpadły między poduszki.",
+              "uk": "Ключі впали між подушки.",
+              "ru": "Ключи упали между подушками."
+            },
+            "options": ["Klíče spadly mezi polštáře.", "Klíče spadly mezi polštáři.", "Klíče spadly pod polštáři.", "Klíče spadly do polštářích."],
+            "correct": 0
+          },
+          {
+            "question": "The keys are between the cushions.",
+            "prompt": {
+              "en": "The keys are between the cushions.",
+              "pl": "Klucze są między poduszkami.",
+              "uk": "Ключі між подушками.",
+              "ru": "Ключи между подушками."
+            },
+            "options": ["Klíče jsou mezi polštáři.", "Klíče jsou mezi polštáře.", "Klíče jsou pod polštáře.", "Klíče jsou do polštářů."],
+            "correct": 0
+          }
+        ],
+        "B2": [
+          {
+            "question": "The children ran behind the house.",
+            "prompt": {
+              "en": "The children ran behind the house.",
+              "pl": "Dzieci pobiegły za dom.",
+              "uk": "Діти побігли за будинок.",
+              "ru": "Дети забежали за дом."
+            },
+            "options": ["Děti běžely za dům.", "Děti běžely za domem.", "Děti běžely u domu.", "Děti běžely o dům."],
+            "correct": 0
+          },
+          {
+            "question": "The children were running behind the house.",
+            "prompt": {
+              "en": "The children were running behind the house.",
+              "pl": "Dzieci biegały za domem.",
+              "uk": "Діти бігали за будинком.",
+              "ru": "Дети бегали за домом."
+            },
+            "options": ["Děti běžely za domem.", "Děti běžely za dům.", "Děti běžely do domu.", "Děti běžely před dům."],
+            "correct": 0
+          },
+          {
+            "question": "He put the suitcase between the two chairs.",
+            "prompt": {
+              "en": "He put the suitcase between the two chairs.",
+              "pl": "Położył walizkę między dwa krzesła.",
+              "uk": "Він поклав валізу між два стільці.",
+              "ru": "Он положил чемодан между двумя стульями."
+            },
+            "options": ["Položil kufr mezi dvě židle.", "Položil kufr mezi dvěma židlemi.", "Položil kufr před dvěma židlemi.", "Položil kufr u dvou židlí."],
+            "correct": 0
+          },
+          {
+            "question": "The suitcase is between the two chairs.",
+            "prompt": {
+              "en": "The suitcase is between the two chairs.",
+              "pl": "Walizka jest między dwoma krzesłami.",
+              "uk": "Валіза між двома стільцями.",
+              "ru": "Чемодан между двумя стульями."
+            },
+            "options": ["Kufr je mezi dvěma židlemi.", "Kufr je mezi dvě židle.", "Kufr je do dvou židlí.", "Kufr je před dvě židle."],
+            "correct": 0
+          },
+          {
+            "question": "We are going up the hill.",
+            "prompt": {
+              "en": "We are going up the hill.",
+              "pl": "Idziemy pod górę.",
+              "uk": "Ми йдемо вгору схилом.",
+              "ru": "Мы идём вверх по склону."
+            },
+            "options": ["Jdeme do kopce.", "Jdeme v kopci.", "Jdeme na kopci.", "Jdeme k kopce."],
+            "correct": 0
+          },
+          {
+            "question": "The path leads through the forest.",
+            "prompt": {
+              "en": "The path leads through the forest.",
+              "pl": "Droga prowadzi przez las.",
+              "uk": "Дорога веде через ліс.",
+              "ru": "Дорога ведёт через лес."
+            },
+            "options": ["Cesta vede lesem.", "Cesta vede do lesu.", "Cesta vede v lese.", "Cesta vede na les."],
+            "correct": 0
+          },
+          {
+            "question": "She returned from the library.",
+            "prompt": {
+              "en": "She returned from the library.",
+              "pl": "Wróciła z biblioteki.",
+              "uk": "Вона повернулася з бібліотеки.",
+              "ru": "Она вернулась из библиотеки."
+            },
+            "options": ["Vrátila se z knihovny.", "Vrátila se v knihovně.", "Vrátila se do knihovny.", "Vrátila se ke knihovně."],
+            "correct": 0
+          },
+          {
+            "question": "He came out of the room.",
+            "prompt": {
+              "en": "He came out of the room.",
+              "pl": "Wyszedł z pokoju.",
+              "uk": "Він вийшов із кімнати.",
+              "ru": "Он вышел из комнаты."
+            },
+            "options": ["Vyšel z pokoje.", "Vyšel do pokoje.", "Vyšel v pokoji.", "Vyšel k pokoji."],
+            "correct": 0
+          }
+        ],
+        "C1": [
+          {
+            "question": "The decision was made in agreement with the committee.",
+            "prompt": {
+              "en": "The decision was made in agreement with the committee.",
+              "pl": "Decyzja została podjęta w porozumieniu z komisją.",
+              "uk": "Рішення було ухвалено за погодженням із комітетом.",
+              "ru": "Решение было принято по согласованию с комитетом."
+            },
+            "options": ["Rozhodnutí bylo přijato v souladu s výborem.", "Rozhodnutí bylo přijato v souladu s výboru.", "Rozhodnutí bylo přijato v souladu o výboru.", "Rozhodnutí bylo přijato v souladu na výbor."],
+            "correct": 0
+          },
+          {
+            "question": "The report was prepared on the basis of available data.",
+            "prompt": {
+              "en": "The report was prepared on the basis of available data.",
+              "pl": "Raport został przygotowany na podstawie dostępnych danych.",
+              "uk": "Звіт було підготовлено на основі доступних даних.",
+              "ru": "Отчёт был подготовлен на основе доступных данных."
+            },
+            "options": ["Zpráva byla připravena na základě dostupných údajů.", "Zpráva byla připravena na základ dostupných údajů.", "Zpráva byla připravena v základě dostupné údaje.", "Zpráva byla připravena do základu dostupných údajů."],
+            "correct": 0
+          },
+          {
+            "question": "Despite the rain, the match continued.",
+            "prompt": {
+              "en": "Despite the rain, the match continued.",
+              "pl": "Mimo deszczu mecz trwał dalej.",
+              "uk": "Попри дощ, матч тривав.",
+              "ru": "Несмотря на дождь, матч продолжался."
+            },
+            "options": ["Navzdory dešti zápas pokračoval.", "Navzdory déšť zápas pokračoval.", "Navzdory deštěm zápas pokračoval.", "Navzdory v dešti zápas pokračoval."],
+            "correct": 0
+          },
+          {
+            "question": "The proposal was accepted thanks to your support.",
+            "prompt": {
+              "en": "The proposal was accepted thanks to your support.",
+              "pl": "Propozycja została przyjęta dzięki waszemu wsparciu.",
+              "uk": "Пропозицію було прийнято завдяки вашій підтримці.",
+              "ru": "Предложение было принято благодаря вашей поддержке."
+            },
+            "options": ["Návrh byl přijat díky vaší podpoře.", "Návrh byl přijat díky vaši podporu.", "Návrh byl přijat díky vaší podporu.", "Návrh byl přijat díky vaší podpory."],
+            "correct": 0
+          },
+          {
+            "question": "The changes were introduced in response to public criticism.",
+            "prompt": {
+              "en": "The changes were introduced in response to public criticism.",
+              "pl": "Zmiany zostały wprowadzone w odpowiedzi na publiczną krytykę.",
+              "uk": "Зміни було запроваджено у відповідь на публічну критику.",
+              "ru": "Изменения были введены в ответ на публичную критику."
+            },
+            "options": ["Změny byly zavedeny v reakci na veřejnou kritiku.", "Změny byly zavedeny v reakci na veřejné kritice.", "Změny byly zavedeny v reakce na veřejnou kritiku.", "Změny byly zavedeny na reakci veřejné kritiky."],
+            "correct": 0
+          },
+          {
+            "question": "The company acted in accordance with the law.",
+            "prompt": {
+              "en": "The company acted in accordance with the law.",
+              "pl": "Firma działała zgodnie z prawem.",
+              "uk": "Компанія діяла відповідно до закону.",
+              "ru": "Компания действовала в соответствии с законом."
+            },
+            "options": ["Společnost jednala v souladu se zákonem.", "Společnost jednala v souladu se zákona.", "Společnost jednala v souladu na zákon.", "Společnost jednala v souladu o zákonu."],
+            "correct": 0
           }
         ]
       }

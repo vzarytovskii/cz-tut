@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 
-export const EXERCISE_TYPES = ['flashcards', 'chooseWord', 'chooseLetter', 'accents', 'confusedWords', 'possessives'];
+export const EXERCISE_TYPES = ['flashcards', 'chooseWord', 'chooseLetter', 'accents', 'confusedWords', 'possessives', 'prepositions'];
 
 // Start every test from a clean profile with English UI and no auto-advance timer.
 export async function freshStart(page, { settings = {}, hash = '#/' } = {}) {
