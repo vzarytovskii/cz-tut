@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cestina-v11';
+const CACHE_NAME = 'cestina-v12';
 const SHELL_ASSETS = [
   './',
   './index.html',

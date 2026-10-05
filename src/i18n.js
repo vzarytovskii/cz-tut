@@ -87,6 +87,7 @@ const STRINGS = {
       accents: { label: 'Put Missing Accents', description: 'Add háčky (ˇ) and čárky (´) — or leave as-is' },
       confusedWords: { label: 'Commonly Confused Words', description: 'Choose between easily confused Czech words (long vs short vowels, similar sounds)' },
       possessives: { label: 'Pronouns – Declension', description: 'Personal pronouns (on/ona/ono/oni) & possessives (jeho/její/jejich/svůj) in all cases' },
+      prepositions: { label: 'Prepositions & Cases', description: 'Choose the right Czech preposition and word ending' },
     },
   },
   cs: {
@@ -159,6 +160,7 @@ const STRINGS = {
       accents: { label: 'Doplňte diakritiku', description: 'Přidejte háčky (ˇ) a čárky (´) — nebo nechte beze změny' },
       confusedWords: { label: 'Často zaměňovaná slova', description: 'Vybírejte mezi snadno zaměnitelnými českými slovy (dlouhé a krátké samohlásky, podobné hlásky)' },
       possessives: { label: 'Zájmena – skloňování', description: 'Osobní zájmena (on/ona/ono/oni) a přivlastňovací (jeho/její/jejich/svůj) ve všech pádech' },
+      prepositions: { label: 'Předložky a pády', description: 'Vyberte správnou českou předložku a koncovku slova' },
     },
   },
   pl: {
@@ -231,6 +233,7 @@ const STRINGS = {
       accents: { label: 'Dodaj brakujące znaki', description: 'Dodaj háčky (ˇ) i čárky (´) — albo zostaw bez zmian' },
       confusedWords: { label: 'Często mylone słowa', description: 'Wybieraj między łatwo mylonymi czeskimi słowami (długie i krótkie samogłoski, podobne dźwięki)' },
       possessives: { label: 'Zaimki – odmiana', description: 'Zaimki osobowe (on/ona/ono/oni) i dzierżawcze (jeho/její/jejich/svůj) we wszystkich przypadkach' },
+      prepositions: { label: 'Przyimki i przypadki', description: 'Wybierz właściwy czeski przyimek i końcówkę wyrazu' },
     },
   },
   uk: {
@@ -304,6 +307,7 @@ const STRINGS = {
       accents: { label: 'Додайте діакритику', description: 'Додайте háčky (ˇ) і čárky (´) — або залиште як є' },
       confusedWords: { label: 'Слова, які часто плутають', description: 'Обирайте між чеськими словами, які легко сплутати (довгі й короткі голосні, схожі звуки)' },
       possessives: { label: 'Займенники – відмінювання', description: 'Особові (on/ona/ono/oni) та присвійні (jeho/její/jejich/svůj) займенники в усіх відмінках' },
+      prepositions: { label: 'Прийменники та відмінки', description: 'Оберіть правильний чеський прийменник і закінчення слова' },
     },
   },
   ru: {
@@ -377,6 +381,7 @@ const STRINGS = {
       accents: { label: 'Расставьте диакритику', description: 'Добавьте háčky (ˇ) и čárky (´) — или оставьте как есть' },
       confusedWords: { label: 'Часто путаемые слова', description: 'Выбирайте между легко путаемыми чешскими словами (долгие и краткие гласные, похожие звуки)' },
       possessives: { label: 'Местоимения – склонение', description: 'Личные (on/ona/ono/oni) и притяжательные (jeho/její/jejich/svůj) местоимения во всех падежах' },
+      prepositions: { label: 'Предлоги и падежи', description: 'Выберите правильный чешский предлог и окончание слова' },
     },
   },
 };

@@ -1,5 +1,32 @@
 import { test, expect } from '@playwright/test';
+import { readFileSync } from 'node:fs';
 import { freshStart, answerCurrent, progressText, EXERCISE_TYPES } from './helpers';
+
+const prepositions = JSON.parse(
+  readFileSync(new URL('../public/data.json', import.meta.url), 'utf8')
+).exercises.prepositions;
+
+for (const lang of ['en', 'pl', 'uk', 'ru', 'cs']) {
+  test(`prepositions: localized prompts and Czech choices in ${lang}`, async ({ page }) => {
+    await freshStart(page, { settings: { lang }, hash: '#/ex/prepositions/A1' });
+    const promptLang = lang === 'cs' ? 'en' : lang;
+    for (const level of ['A1', 'A2', 'B1', 'B2', 'C1']) {
+      if (level !== 'A1') {
+        await page.getByRole('button', { name: level, exact: true }).click();
+      }
+      const prompt = page.locator(`.question-text > span[lang="${promptLang}"]`);
+      await expect(prompt).toBeVisible();
+      const text = await prompt.textContent();
+      const item = prepositions.items[level].find((it) => it.prompt[promptLang] === text);
+      expect(item, `${level} prompt should use ${promptLang}`).toBeTruthy();
+      const labels = page.locator('.option-label');
+      expect((await labels.allTextContents()).sort()).toEqual([...item.options].sort());
+      for (const label of await labels.all()) await expect(label).toHaveAttribute('lang', 'cs');
+      await page.locator('.option-btn').filter({ hasText: item.options[item.correct] }).click();
+      await expect(page.locator('.progress-segment.correct')).toHaveCount(1);
+    }
+  });
+}
 
 for (const type of EXERCISE_TYPES) {
   test(`${type}: renders and records an answer`, async ({ page }) => {
