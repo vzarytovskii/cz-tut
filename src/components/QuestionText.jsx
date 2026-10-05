@@ -1,5 +1,6 @@
-import { useId, useState } from 'react';
 import { useT } from '../SettingsContext';
+import { localizeHint } from '../hintTranslations';
+import { localizeQuestion } from '../exerciseContent';
 
 function splitHint(question) {
   const match = /\(([^()]+)\)/.exec(question);
@@ -19,45 +20,30 @@ function splitHint(question) {
   return { text, hint: match[1], start, word };
 }
 
-// Translate-into-Czech prompts show only the word, in the learner's language.
-// Czech UI falls back to English so the answer isn't given away.
-function pickPrompt(prompt, lang) {
-  const code = lang === 'cs' || !prompt[lang] ? 'en' : lang;
-  return { text: prompt[code], lang: code };
-}
-
-export default function QuestionText({ question, prompt }) {
+export default function QuestionText({ question, prompt, questionTranslations }) {
   const t = useT();
-  const [open, setOpen] = useState(false);
-  const hintId = useId();
-  const shown = prompt ? pickPrompt(prompt, t.lang) : null;
-  const text0 = shown ? shown.text : question;
-  const parsed = splitHint(text0);
-  const className = shown ? 'question-text prompt-word' : 'question-text';
-  const lead = shown && <span className="sr-only">{t('translatePrompt')} </span>;
+  const shown = localizeQuestion({ question, prompt, questionTranslations }, t.lang);
+  const parsed = splitHint(shown.text);
+  const className = prompt ? 'question-text prompt-word' : 'question-text';
+  const lead = prompt && <span className="sr-only">{t('translatePrompt')} </span>;
 
   if (!parsed || parsed.start < 0) {
-    return <p className={className}>{lead}<span lang={shown?.lang}>{text0}</span></p>;
+    return <p className={className}>{lead}<span lang={shown.lang}>{shown.text}</span></p>;
   }
 
   const { text, hint, start, word } = parsed;
+  const translated = (prompt || questionTranslations) && shown.lang !== 'en';
+  const hintLang = translated ? shown.lang : t.lang;
+  const localizedHint = translated ? hint : localizeHint(hint, hintLang);
   return (
     <p className={className}>
       {lead}
-      <span lang={shown?.lang}>
+      <span lang={shown.lang}>
       {text.slice(0, start)}
-      <button
-        type="button"
-        className={`hint-trigger${open ? ' open' : ''}`}
-        aria-label={word === '___' ? t('hintForBlank') : t('hintForWord', { word })}
-        aria-describedby={hintId}
-        aria-expanded={open}
-        onClick={() => setOpen((visible) => !visible)}
-        onBlur={() => setOpen(false)}
-      >
-        {word}
-        <span id={hintId} className="hint-tooltip" role="tooltip">{hint}</span>
-      </button>
+      <span className="question-hint-anchor">
+        <span className="question-hint" lang={hintLang}>{localizedHint}</span>
+        <span className="question-hint-target">{word}</span>
+      </span>
       {text.slice(start + word.length)}
       </span>
     </p>

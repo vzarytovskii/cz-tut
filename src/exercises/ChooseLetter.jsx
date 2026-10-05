@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { useT } from '../SettingsContext';
 import OptionList from '../components/OptionList';
 import FeedbackMark from '../components/FeedbackMark';
+import { localizeLetterHint } from '../exerciseContent';
 
 export default function ChooseLetter({ item, onAnswer }) {
   const t = useT();
@@ -9,6 +10,7 @@ export default function ChooseLetter({ item, onAnswer }) {
   const [typed, setTyped] = useState('');
   const [selectedIdx, setSelectedIdx] = useState(null);
   const inputRef = useRef(null);
+  const hint = localizeLetterHint(item, t.lang);
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -46,7 +48,7 @@ export default function ChooseLetter({ item, onAnswer }) {
 
   return (
     <div className="question-container">
-      <p className="hint-text">{item.hint}</p>
+      <p className="hint-text" lang={hint.lang}>{hint.text}</p>
       <div className={`word-display${resultCls}`} lang="cs">
         <span className="mark-anchor">
           {wordParts[0]}<span className="blank">{answered ? item.missing : '_'}</span>{wordParts[1] || ''}

@@ -5,10 +5,15 @@ export default function Flashcards({ item, direction, onNext }) {
   const t = useT();
   const [flipped, setFlipped] = useState(false);
 
-  const front = direction === 'en-cz' ? item.front : item.back;
-  const back = direction === 'en-cz' ? item.back : item.front;
-  const frontLang = direction === 'en-cz' ? 'en' : 'cs';
-  const backLang = direction === 'en-cz' ? 'cs' : 'en';
+  const localizedFront = t.lang === 'cs'
+    ? item.back
+    : t.lang === 'en'
+      ? item.front
+      : item.frontTranslations?.[t.lang] ?? item.front;
+  const front = direction === 'en-cz' ? localizedFront : item.back;
+  const back = direction === 'en-cz' ? item.back : localizedFront;
+  const frontLang = direction === 'en-cz' ? t.lang : 'cs';
+  const backLang = direction === 'en-cz' ? 'cs' : t.lang;
 
   return (
     <div className="flashcard-container">

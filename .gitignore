@@ -31,6 +31,8 @@
 !/src/SettingsContext.jsx
 !/src/i18n.js
 !/src/explanationTranslations.js
+!/src/exerciseContent.js
+!/src/hintTranslations.js
 !/src/index.css
 !/src/main.jsx
 !/src/router.js

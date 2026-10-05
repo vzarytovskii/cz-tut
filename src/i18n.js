@@ -20,7 +20,7 @@ export function detectLanguage() {
 }
 
 // Plural values are objects keyed by Intl.PluralRules categories.
-const STRINGS = {
+export const STRINGS = {
   en: {
     appTitle: 'Čeština',
     back: 'Back',

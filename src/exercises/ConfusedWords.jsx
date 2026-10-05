@@ -28,7 +28,7 @@ export default function ConfusedWords({ item, onAnswer }) {
 
   return (
     <div className="question-container">
-      <QuestionText question={item.question} prompt={item.prompt} />
+      <QuestionText question={item.question} prompt={item.prompt} questionTranslations={item.questionTranslations} />
       <OptionList
         options={options}
         onPick={handleClick}

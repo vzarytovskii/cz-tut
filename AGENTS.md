@@ -65,6 +65,8 @@ There are no lint or format scripts. Tests use Playwright (`playwright.config.js
   - When both a textbox and buttons exist (`ChooseLetter`), only the input method actually used shows border feedback — tracked via `usedButton`/`selectedIdx` so the unused control stays neutral.
   - Advance timing in `Exercise.jsx`: correct answers advance after `700ms`, wrong after `1500ms`; flashcards advance immediately.
 - **Randomness:** `utils.shuffle` (Fisher–Yates, returns a shallow copy). MCQ components shuffle options locally inside `useMemo(…, [item])` and recompute the correct index (`correctIdx`) — never mutate `item`.
+- **Question hints:** `QuestionText` displays parenthetical hints above the gap (or associated word) as always-visible, bordered tags with a downward pointer and smaller italic serif text; no hover or click is required. `src/hintTranslations.js` localizes English hints to the interface language; hints already translated in `item.prompt` are preserved.
+- **Exercise localization:** `src/exerciseContent.js` selects localized prompts, instructions, answer choices, and missing-letter hints. Translation prompts contain only the target term or phrase, optionally with a meaning hint; do not add framing such as "What does ... mean?", "is:", or "Which is correct?". Czech exercise text stays Czech. `prompt` and `hintTranslations` cover English/Polish/Ukrainian/Russian; Czech UI intentionally uses English for translation tasks so the answer is not revealed. `questionTranslations` localizes instructions into Czech/Polish/Ukrainian/Russian, with English in `question`. `optionsTranslations` contains arrays in the original option order, with the same `correct` index; include Czech only for instructional choices, not reverse-translation answers. Shuffle original indices once per item, not localized labels, so switching languages preserves order and grading.
 - **Styling:** plain CSS in a single `src/index.css`, class-based (ad-hoc semantic names, not BEM/utility). Theme via CSS custom properties under `:root` (`--bg`, `--bg-card`, `--text`, `--text-muted`, `--accent`, `--accent-hover`, `--success`, `--error`, `--border`, `--radius`, `--shadow`, `--font`). Dark mode is dual: OS-driven `@media (prefers-color-scheme: dark)` (suppressed by `:root[data-theme="light"]`) plus an explicit `[data-theme="dark"]` override. `theme: 'auto'` removes the attribute and defers to the OS. Always reference tokens, never hard-coded colors.
 - **Error handling:** intentionally silent/best-effort — `localStorage` and `fetch` access wrapped in `try/catch { /* noop */ }` or `.catch(() => …)`. Match this tolerant style for client-only persistence.
 - **State:** local `useState` per component; lift only what `Exercise.jsx` must orchestrate.
@@ -73,17 +75,19 @@ There are no lint or format scripts. Tests use Playwright (`playwright.config.js
 Top-level keys: `meta` (`{ version, lastUpdated }`), `levels` (`["A1","A2","B1","B2","C1"]`), and `exercises`. Each `exercises[type]` is `{ label, icon, description, items }`, where `items` is keyed by level → array of records. Registered types: `flashcards`, `chooseWord`, `chooseLetter`, `accents`, `confusedWords`, `possessives`.
 ```jsonc
 // flashcards
-{ "front": "hello", "back": "ahoj" }
+{ "front": "hello", "back": "ahoj", "frontTranslations": { "pl": "cześć", "uk": "привіт", "ru": "привет" } }
 // chooseWord  (and possessives — same shape)
-{ "question": "How do you say 'cat' in Czech?", "options": ["kočka","pes","pták","ryba"], "correct": 0 }
+{ "question": "cat", "prompt": { "en": "cat", "pl": "kot", "uk": "кіт", "ru": "кот" }, "options": ["kočka","pes","pták","ryba"], "correct": 0 }
 // chooseLetter
-{ "word": "d_kuji", "missing": "ě", "position": 1, "options": ["e","ě","é","a"], "hint": "thank you" }
+{ "word": "d_kuji", "missing": "ě", "position": 1, "options": ["e","ě","é","a"], "hint": "thank you", "hintTranslations": { "pl": "dziękuję", "uk": "дякую", "ru": "спасибо" } }
 // accents
 { "plain": "dekuji", "correct": "děkuji", "accents": [{ "pos": 1, "from": "e", "to": "ě" }] }
 // confusedWords
 { "question": "...", "options": ["být","byt"], "correct": 0, "explanation": "..." }
 ```
 `correct` is the zero-based index into the **unshuffled** `options`; components shuffle locally and remap before grading. `data.json` is served **network-first** by the service worker, so content can update without a redeploy. There is **no build-time data step** — `public/` is copied verbatim; edit `public/data.json` directly.
+
+Flashcards keep `front` in English and `back` in Czech; `frontTranslations` supplies the Polish, Ukrainian, and Russian prompt text. In the UI, English uses `front` and Czech uses `back`.
 
 ## Important Files
 - `src/main.jsx` — entry point + service-worker registration.
