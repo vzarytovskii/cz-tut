@@ -334,7 +334,7 @@
           },
           {
             "front": "one",
-            "back": "jedna",
+            "back": "jeden / jedna / jedno",
             "frontTranslations": {
               "pl": "jeden",
               "ru": "один",
@@ -343,7 +343,7 @@
           },
           {
             "front": "two",
-            "back": "dva",
+            "back": "dva / dvě",
             "frontTranslations": {
               "pl": "dwa",
               "uk": "два",
@@ -3544,9 +3544,9 @@
             "question": "What is the perfective form of 'psát'?",
             "options": [
               "napsat",
-              "psat",
-              "přepsat",
-              "dopisat"
+              "psát",
+              "píšu",
+              "psal"
             ],
             "correct": 0,
             "questionTranslations": {
@@ -3610,9 +3610,9 @@
             "question": "What is the perfective form of 'dělat'?",
             "options": [
               "udělat",
-              "dodělat",
-              "předělat",
-              "nadělat"
+              "dělat",
+              "dělám",
+              "dělal"
             ],
             "correct": 0,
             "questionTranslations": {
@@ -4434,7 +4434,7 @@
               "to write down",
               "to sign",
               "to rewrite",
-              "to copy"
+              "to read aloud"
             ],
             "correct": 2,
             "questionTranslations": {
@@ -4448,25 +4448,25 @@
                 "zapsat",
                 "podepsat",
                 "znovu napsat",
-                "opsat"
+                "přečíst nahlas"
               ],
               "pl": [
                 "zapisać",
                 "podpisać",
                 "przepisać",
-                "kopiować"
+                "czytać na głos"
               ],
               "uk": [
                 "записати",
                 "підписати",
                 "переписати",
-                "копіювати"
+                "читати вголос"
               ],
               "ru": [
                 "записать",
                 "подписать",
                 "переписать",
-                "копировать"
+                "читать вслух"
               ]
             }
           },
@@ -4688,7 +4688,7 @@
               "Kniha, kterou jsem četl...",
               "Kniha, které jsem četl...",
               "Kniha, jíž jsem četl...",
-              "Kniha, již jsem četl..."
+              "Kniha, který jsem četl..."
             ],
             "correct": 0,
             "prompt": {
