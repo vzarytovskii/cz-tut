@@ -75,8 +75,8 @@
             "front": "no",
             "back": "ne",
             "frontTranslations": {
-              "pl": "nIE",
-              "uk": "немає",
+              "pl": "nie",
+              "uk": "ні",
               "ru": "нет"
             }
           },
@@ -264,7 +264,7 @@
             "front": "water",
             "back": "voda",
             "frontTranslations": {
-              "uk": "води",
+              "uk": "вода",
               "pl": "woda",
               "ru": "вода"
             }
@@ -374,7 +374,7 @@
             "frontTranslations": {
               "ru": "рука",
               "pl": "ręka",
-              "uk": "руку"
+              "uk": "рука"
             }
           },
           {
@@ -410,7 +410,7 @@
             "frontTranslations": {
               "pl": "dobry",
               "ru": "хороший",
-              "uk": "добре"
+              "uk": "добрий"
             }
           },
           {
@@ -418,7 +418,7 @@
             "back": "špatný",
             "frontTranslations": {
               "pl": "zły",
-              "uk": "погано",
+              "uk": "поганий",
               "ru": "плохой"
             }
           },
@@ -538,7 +538,7 @@
             "frontTranslations": {
               "pl": "pociąg",
               "uk": "поїзд",
-              "ru": "тренироваться"
+              "ru": "поезд"
             }
           },
           {
@@ -610,7 +610,7 @@
             "frontTranslations": {
               "ru": "поужинать",
               "uk": "вечеряти",
-              "pl": "zjeść obiad"
+              "pl": "zjeść kolację"
             }
           },
           {
@@ -627,7 +627,7 @@
             "back": "pracovat",
             "frontTranslations": {
               "pl": "pracować",
-              "uk": "на роботу",
+              "uk": "працювати",
               "ru": "работать"
             }
           },
@@ -771,7 +771,7 @@
             "back": "hezký",
             "frontTranslations": {
               "pl": "ładny",
-              "uk": "гарна",
+              "uk": "гарний",
               "ru": "симпатичный"
             }
           },
@@ -788,9 +788,9 @@
             "front": "fast",
             "back": "rychlý",
             "frontTranslations": {
-              "pl": "szybko",
+              "pl": "szybki",
               "ru": "быстрый",
-              "uk": "швидко"
+              "uk": "швидкий"
             }
           },
           {
@@ -815,7 +815,7 @@
             "front": "cold",
             "back": "studený",
             "frontTranslations": {
-              "pl": "zimno",
+              "pl": "zimny",
               "ru": "холодный",
               "uk": "холодний"
             }
@@ -825,7 +825,7 @@
             "back": "unavený",
             "frontTranslations": {
               "pl": "zmęczony",
-              "uk": "втомився",
+              "uk": "втомлений",
               "ru": "усталый"
             }
           },
@@ -869,9 +869,9 @@
             "front": "to understand",
             "back": "rozumět",
             "frontTranslations": {
-              "ru": "понять",
-              "pl": "zrozumieć",
-              "uk": "щоб зрозуміти"
+              "ru": "понимать",
+              "pl": "rozumieć",
+              "uk": "розуміти"
             }
           },
           {
@@ -934,7 +934,7 @@
             "frontTranslations": {
               "pl": "piosenkarz",
               "ru": "певец",
-              "uk": "співачка"
+              "uk": "співак"
             }
           },
           {
@@ -1312,7 +1312,7 @@
             "front": "medicine",
             "back": "lék",
             "frontTranslations": {
-              "pl": "medycyna",
+              "pl": "lek",
               "uk": "ліки",
               "ru": "лекарство"
             }
@@ -1438,9 +1438,9 @@
             "front": "open-faced sandwich",
             "back": "chlebíček",
             "frontTranslations": {
-              "uk": "бутерброд з відкритим обличчям",
-              "ru": "открытый сэндвич",
-              "pl": "kanapka z otwartą twarzą"
+              "uk": "відкритий бутерброд",
+              "ru": "открытый бутерброд",
+              "pl": "otwarta kanapka"
             }
           },
           {
@@ -1619,7 +1619,7 @@
             "back": "kadeřnice",
             "frontTranslations": {
               "pl": "fryzjer",
-              "uk": "перукарня",
+              "uk": "перукар",
               "ru": "парикмахер"
             }
           },
@@ -1669,12 +1669,12 @@
             }
           },
           {
-            "front": "(quitting) notice",
+            "front": "notice of resignation",
             "back": "výpověď",
             "frontTranslations": {
-              "pl": "(rezygnacja) z powiadomienia",
-              "uk": "(звільнення) повідомлення",
-              "ru": "(уход) уведомление"
+              "pl": "wypowiedzenie",
+              "uk": "заява про звільнення",
+              "ru": "заявление об увольнении"
             }
           },
           {
@@ -1683,16 +1683,16 @@
             "frontTranslations": {
               "pl": "nadgodziny",
               "uk": "понаднормова робота",
-              "ru": "через некоторое время"
+              "ru": "сверхурочная работа"
             }
           },
           {
             "front": "to get married",
             "back": "vzít se",
             "frontTranslations": {
-              "uk": "вийти заміж",
-              "ru": "выйти замуж",
-              "pl": "wyjść za mąż"
+              "uk": "одружитися",
+              "ru": "вступить в брак",
+              "pl": "wziąć ślub"
             }
           },
           {
@@ -1881,16 +1881,16 @@
             "front": "press",
             "back": "tisk",
             "frontTranslations": {
-              "pl": "naciskać",
+              "pl": "prasa",
               "uk": "преса",
-              "ru": "нажимать"
+              "ru": "пресса"
             }
           },
           {
             "front": "broadcasting",
             "back": "vysílání",
             "frontTranslations": {
-              "pl": "nadawczy",
+              "pl": "nadawanie",
               "ru": "вещание",
               "uk": "мовлення"
             }
@@ -1962,9 +1962,9 @@
             "front": "to enable",
             "back": "umožňovat",
             "frontTranslations": {
-              "ru": "чтобы включить",
-              "pl": "włączyć",
-              "uk": "щоб увімкнути"
+              "ru": "позволить",
+              "pl": "umożliwić",
+              "uk": "уможливити"
             }
           },
           {
@@ -2017,7 +2017,7 @@
             "back": "udržitelnost",
             "frontTranslations": {
               "pl": "zrównoważony rozwój",
-              "uk": "стійкість",
+              "uk": "сталий розвиток",
               "ru": "устойчивость"
             }
           },
@@ -2044,7 +2044,7 @@
             "back": "společnost",
             "frontTranslations": {
               "pl": "społeczeństwo",
-              "uk": "суспільства",
+              "uk": "суспільство",
               "ru": "общество"
             }
           },
@@ -2090,7 +2090,7 @@
             "frontTranslations": {
               "pl": "otyły",
               "ru": "страдающий ожирением",
-              "uk": "ожирінням"
+              "uk": "огрядний"
             }
           },
           {
@@ -2115,7 +2115,7 @@
             "front": "net (pay)",
             "back": "čistý",
             "frontTranslations": {
-              "ru": "чистая (оплата)",
+              "ru": "чистая зарплата",
               "pl": "netto (wynagrodzenie)",
               "uk": "нетто (оплата)"
             }
@@ -2272,7 +2272,7 @@
             "frontTranslations": {
               "ru": "непреодолимый",
               "pl": "nie do pokonania",
-              "uk": "непереборні"
+              "uk": "непереборний"
             }
           },
           {
@@ -2298,7 +2298,7 @@
             "back": "důsledky",
             "frontTranslations": {
               "pl": "implikacje",
-              "ru": "подразумеваемое",
+              "ru": "последствия",
               "uk": "наслідки"
             }
           },
@@ -2492,13 +2492,13 @@
             "optionsTranslations": {
               "pl": [
                 "mały",
-                "szybko",
+                "szybki",
                 "powolny",
                 "duży"
               ],
               "uk": [
                 "маленький",
-                "швидко",
+                "швидкий",
                 "повільний",
                 "великий"
               ],
@@ -2681,9 +2681,9 @@
                 "nowy"
               ],
               "uk": [
-                "погано",
+                "поганий",
                 "старий",
-                "добре",
+                "добрий",
                 "новий"
               ],
               "ru": [
@@ -2727,8 +2727,8 @@
                 "smutny"
               ],
               "uk": [
-                "добре",
-                "погано",
+                "добрий",
+                "поганий",
                 "щасливий",
                 "сумний"
               ],
@@ -2774,7 +2774,7 @@
               ],
               "uk": [
                 "нога",
-                "руку",
+                "рука",
                 "голова",
                 "стопа"
               ],
@@ -2851,7 +2851,7 @@
                 "podróżować"
               ],
               "uk": [
-                "на роботу",
+                "працювати",
                 "готувати",
                 "спати",
                 "подорожувати"
@@ -3066,7 +3066,7 @@
               ],
               "ru": [
                 "автобус",
-                "тренироваться",
+                "поезд",
                 "самолёт",
                 "автомобиль"
               ]
@@ -3857,7 +3857,7 @@
                 "zupa"
               ],
               "uk": [
-                "вареник",
+                "кнедлик",
                 "млинець",
                 "ковбаса",
                 "суп"
@@ -4241,19 +4241,19 @@
             "correct": 0,
             "optionsTranslations": {
               "pl": [
-                "wyjść za mąż",
-                "się rozwieść",
+                "wziąć ślub",
+                "rozwieść się",
                 "spotkać się",
                 "zerwać"
               ],
               "uk": [
-                "вийти заміж",
+                "одружитися",
                 "розлучитися",
                 "зустрітися",
                 "розлучатися"
               ],
               "ru": [
-                "выйти замуж",
+                "вступить в брак",
                 "развестись",
                 "встретиться",
                 "расстаться"
@@ -4271,20 +4271,20 @@
             "correct": 0,
             "optionsTranslations": {
               "pl": [
-                "się rozwieść",
-                "wyjść za mąż",
+                "rozwieść się",
+                "wziąć ślub",
                 "zakochać się",
                 "kłócić się"
               ],
               "uk": [
                 "розлучитися",
-                "вийти заміж",
+                "одружитися",
                 "закохатися",
                 "посваритися"
               ],
               "ru": [
                 "развестись",
-                "выйти замуж",
+                "вступить в брак",
                 "влюбиться",
                 "ссориться"
               ]
@@ -4958,13 +4958,13 @@
                 "розмовний",
                 "вульгарний",
                 "діалектний",
-                "офіційний / літературний"
+                "формальний / літературний"
               ],
               "ru": [
                 "разговорный",
                 "вульгарный",
                 "диалектный",
-                "официальный / литературный"
+                "формальный / литературный"
               ]
             }
           },
@@ -5150,19 +5150,19 @@
                 "Są identyczne",
                 "'který' jest archaiczne",
                 "'jenž' jest nieformalne",
-                "'jenž' jest literackie / formalne"
+                "'jenž' ma charakter literacki / formalny"
               ],
               "uk": [
                 "Вони однакові",
                 "'který' є архаїчним",
                 "'jenž' є неформальним",
-                "'jenž' є літературним / офіційним"
+                "'jenž' має книжний / формальний характер"
               ],
               "ru": [
                 "Они одинаковы",
                 "'který' архаично",
                 "'jenž' неформально",
-                "'jenž' литературно / официально"
+                "'jenž' относится к книжному / формальному стилю"
               ]
             }
           },
